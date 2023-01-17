@@ -1,23 +1,42 @@
-<div class="displayTable">
-    <div class="displayTableCell">
-      <div class="authBlock">
-        <h3>Thank You for Registering</h3>
-        <div class="formGroup" *ngIf="authService.userData as user">
-          <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
-          <p class="text-center">Please check your email and click on the link to verfiy your email address.</p>
-        </div>
+<body>
+	<div class="d-lg-flex half">
+	  <div class="bg order-1 order-md-2" style="background-image: url('../../../assets/images/jempol.jpeg');"></div>
+	  <div class="contents order-2 order-md-1">
+  
+		<div class="container">
+		  <div class="row align-items-center justify-content-center">
+			<div class="col-md-7">
+        <h1><b>Thank You for Registering</b></h1>
+			  <div class="mb-4 form-group" *ngIf="authService.userData as user">
+        <p class="mb-4">We have sent a confirmation email to <strong>{{user.email}}</strong></p>
+        <p class="mb-4">Please check your email and click on the link to verfiy your email address.</p>
+				<!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
+			  </div>
         
-        <!-- Calling SendVerificationMail() method using authService Api -->
-        <div class="formGroup">
-          <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
-            <i class="fas fa-redo-alt"></i>
-            Resend Verification Email
-          </button>
-        </div>
-      </div>
-      <div class="redirectToLogin">
-        <span>Go back to?
-    <a class="redirect" routerLink="/sign-in">Sign In</a></span>
-      </div>
-    </div>
-  </div>
+			  <form action="" method="post">        
+        
+        <div class="d-flex mb-5 align-items-center">
+				</div>
+        <!-- Calling ForgotPassword from AuthService Api -->
+				<input type="submit" value="Resend Verification Email" class="btn btn-block btn-primary" (click)="authService.SendVerificationMail()"
+        >
+
+			  </form>
+        <div class="d-flex mb-5 align-items-center">
+					<span >Go back to <a class="redirect" routerLink="/sign-in">Log In</a></span> 
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+  
+	  
+	</div>
+	  
+	  
+  
+	  <script src="js/jquery-3.3.1.min.js"></script>
+	  <script src="js/popper.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/main.js"></script>
+	</body>

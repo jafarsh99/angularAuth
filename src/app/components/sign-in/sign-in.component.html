@@ -1,42 +1,65 @@
-<mat-card class="card">
-	<mat-card-title class="card-title">Login Page</mat-card-title>
-	<mat-card-content>
-		<div class="displayTable">
-			<div class="displayTableCell">
-				<div class="authBlock">
-					<form action="" class="example-form">
-						<mat-form-field class="example-full-width">
-							<mat-label>Username</mat-label>
-							<input matInput  type="text" placeholder="Username" #userName required>
-						</mat-form-field>
-						<div class="formGroup">
-							<input type="password" class="formControl" placeholder="Password" #userPassword required>
+<body>
+	<div class="d-lg-flex half">
+		<div class="bg order-1 order-md-2" style="background-image: url('../../../assets/images/ogya-img.jpg');"></div>
+		<div class="contents order-2 order-md-1">
+
+			<div class="container">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-md-7">
+						<div class="mb-4">
+							<h1><b>Sign In</b></h1>
+							<!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
 						</div>
-						<!-- Calling SignIn Api from AuthService -->
-						<div class="formGroup">
-							<input type="button" class="btn btnPrimary" value="Log in"
+						<form action="" method="post">
+							<div class="form-group first">
+								<input type="text" placeholder="username" class="form-control" #userName required
+									id="username">
+
+							</div>
+							<div class="form-group last mb-3">
+								<input type="password" placeholder="password" class="form-control" #userPassword
+									required id="password">
+
+							</div>
+
+							<div class="d-flex mb-5 align-items-center">
+								<span><a class="redirect" routerLink="/register-user">Sign Up</a></span>
+
+								<span class="ml-auto"><a routerLink="/forgot-password" class="forgot-pass">Forgot
+										Password</a></span>
+							</div>
+
+							<input type="submit" value="Log In" class="btn btn-block btn-primary"
 								(click)="authService.SignIn(userName.value, userPassword.value)">
-						</div>
-						<div class="formGroup">
-							<span class="or"><span class="orInner">Or</span></span>
-						</div>
-						<!-- Calling GoogleAuth Api from AuthService -->
-						<div class="formGroup">
-							<button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-								<i class="fab fa-google-plus-g"></i>
-								Log in with Google
-							</button>
-						</div>
-						<div class="forgotPassword">
-							<a routerLink="/forgot-password">Forgot Password</a>
-						</div>
-					</form>
-				</div>
-				<div class="redirectToLogin">
-					<span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span>
-						<a class="redirect" routerLink="/register-user">Sign Up</a></span>
+
+							<span class="d-block text-center my-4 text-muted">&mdash; or &mdash;</span>
+
+							<div class="social-login">
+								<!-- <a href="#" class="facebook btn d-flex justify-content-center align-items-center">
+					<span class="icon-facebook mr-3"></span> Login with Facebook
+				  </a>
+				  <a href="#" class="twitter btn d-flex justify-content-center align-items-center">
+					<span class="icon-twitter mr-3"></span> Login with  Twitter
+				  </a> -->
+								<a (click)="authService.GoogleAuth()"
+									class="google btn d-flex justify-content-center align-items-center">
+									<span class="icon-google mr-3"><i class="uil uil-google"></i></span> Login with
+									Google
+								</a>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
-	</mat-card-content>
-</mat-card>
+
+
+	</div>
+
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
