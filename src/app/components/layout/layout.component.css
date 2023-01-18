@@ -36,3 +36,21 @@ main{
     height: fit-content;
     
 }
+
+.layout-body{
+    background-color: black;
+}
+
+.body-outlet{
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: -20px;
+}
+
+.div-wrapper{
+    background-color: rgba(136, 188, 214, 1);
+}
+
+.logout{
+    margin-right: 30px;
+}
