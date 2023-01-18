@@ -1,0 +1,13 @@
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.btn-top-list{
+    float: right;
+}
+
+.btn-top{
+    margin-right: 5px;
+    margin-left: 5px;
+}
