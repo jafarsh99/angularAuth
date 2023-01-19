@@ -5,7 +5,7 @@
 import { initializeApp } from "firebase/app";
 
 export const environment = {
-  production: false,
+  production: true,
   firebase: {
     apiKey: "AIzaSyAtYRFS1BeXsu7wk5A13w61QYqXPJ3DzRc",
     authDomain: "angularauth-50d43.firebaseapp.com",
