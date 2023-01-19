@@ -23,12 +23,30 @@ a{
     width: 100%;
     padding: 0 !important;
 }
-
+.btn-outline-primary{
+    border: none;
+}
 .sidebar{
-    padding: 0 !important;
-    /* height: 400px; */
     border-radius: 10px;
-    position: sticky;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    padding-top: 100px;
+    width: 100%;
+    padding-right: 0;
+}
+
+.sidebar-sticky{
+    position: absolute;
+    width: 100%;
+
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
 }
 
 main{
@@ -45,6 +63,8 @@ main{
     border-radius: 20px;
     padding: 30px;
     margin-top: -20px;
+    top: 0;
+    left: 0 ;
 }
 
 .div-wrapper{
@@ -53,4 +73,8 @@ main{
 
 .logout{
     margin-right: 30px;
+}
+
+.brand-logo{
+    margin-left: 25px;
 }

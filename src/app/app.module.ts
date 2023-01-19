@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // NGX Pagination
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LayoutComponent } from './components/layout/layout.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     ToastrModule.forRoot(), // ToastrModule added
     ReactiveFormsModule,
     NgxPaginationModule, // Include it in imports array    
+    MatDialogModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

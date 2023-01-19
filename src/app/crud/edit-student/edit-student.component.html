@@ -1,4 +1,4 @@
-<body>
+
 <div
   class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
 >
@@ -16,9 +16,9 @@
     <div class="pricing-header form-block mx-auto">
       <form [formGroup]="editForm" (ngSubmit)="updateForm()" novalidate>
         <div class="row">
-          <div class="col-lg-5 col-md-12 col-sm-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="row">
-              <div class="col-md-12 mb-3">
+              <div class="col-md-6 mb-3">
                 <label>First name</label>
                 <input
                   type="text"
@@ -33,7 +33,7 @@
                   <sup>*</sup>Name shouldn't be less than 2 words
                 </p>
               </div>
-              <div class="col-md-12 mb-3">
+              <div class="col-md-6 mb-3">
                 <label>Last name</label>
                 <input
                   type="text"
@@ -92,4 +92,3 @@
     </div>
   </div>
 </div>
-</body>

@@ -7,7 +7,7 @@
   <a
   (click)="goBack()"
   class="btn btn-secondary btn-top"
->
+> <i class="uil uil-corner-up-left-alt"></i>
   Back
 </a>
   <a
@@ -30,7 +30,7 @@
   </div>
   <div class="table-responsive" *ngIf="hideWhenNoStudent">
     <table
-      class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg"
+      class="table table-bordered table-hover table-responsive-sm table-responsive-md table-responsive-lg"
     >
       <thead>
         <tr>
@@ -66,6 +66,7 @@
             >
           </td>
         </tr>
+        <tr><b>Amount of Data : </b>({{Student.length}})</tr>
       </tbody>
     </table>
   </div>

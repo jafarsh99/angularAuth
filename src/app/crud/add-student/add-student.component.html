@@ -5,22 +5,23 @@
     <a
     (click)="goBack()"
     class="btn btn-secondary btn-top"
-  >
+  > <i class="uil uil-corner-up-left-alt"></i>
     Back
   </a>
   </div>
 </div>
 <form [formGroup]="studentForm" (ngSubmit)="submitStudentData()" novalidate>
   <div class="row">
-    <div class="col-lg-5 col-md-12 col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 align-items-center">
       <div class="row">
-        <div class="col-md-12 mb-3">
+        <div class="col-md-6 mb-3">
           <label>First name</label>
           <input
             type="text"
             formControlName="firstName"
             class="form-control"
             required
+            placeholder="John"
           />
           <!-- errors-->
           <p *ngIf="firstName?.touched && firstName?.invalid" class="error">
@@ -31,9 +32,9 @@
             <sup>*</sup>Name shouldn't be less than 2 words
           </p>
         </div>
-        <div class="col-md-12 mb-3">
+        <div class="col-md-6 mb-3">
           <label>Last name</label>
-          <input type="text" formControlName="lastName" class="form-control" />
+          <input type="text" formControlName="lastName" class="form-control" placeholder="Doe" />
         </div>
       </div>
       <div class="row">
@@ -44,6 +45,7 @@
             formControlName="email"
             class="form-control"
             required
+            placeholder="johndoe@..."
           />
           <!-- errors-->
           <p *ngIf="email?.touched && email?.invalid" class="error">
@@ -60,6 +62,7 @@
             formControlName="mobileNumber"
             class="form-control"
             required
+            placeholder="+62..."
           />
           <!-- errors-->
           <p *ngIf="mobileNumber?.touched && mobileNumber?.invalid" class="error">

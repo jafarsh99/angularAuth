@@ -15,7 +15,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = 
 [
-
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
